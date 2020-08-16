@@ -23,11 +23,19 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-XR-fzU">
-                                <rect key="frame" x="433" y="262" width="30" height="30"/>
+                                <rect key="frame" x="369" y="262" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="HIT"/>
                                 <connections>
                                     <action selector="touchUpHitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAZ-id-2Sf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-wV-wmo">
+                                <rect key="frame" x="475" y="262" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IL2-6B-SJV"/>
                                 </connections>
                             </button>
                         </subviews>
