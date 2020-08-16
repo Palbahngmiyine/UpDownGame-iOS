@@ -36,19 +36,21 @@ class ViewController: UIViewController {
         print(slider.value)
         
         tryCount += 1
-        //tryCountLabel.text = String(tryCount) + "/5"
+        // tryCountLabel.text = String(tryCount) + "/5"
         tryCountLabel.text = "\(tryCount)/5"
         
         if randomValue == hitValue {
             print("You HIT!!")
             reset()
-            return
-        }
-        
-        if tryCount >= 5 {
+        } else if tryCount >= 5 {
             print("You lose..")
             reset()
-            return
+        } else if randomValue > hitValue {
+            slider.minimumValue = Float(hitValue)
+            minValueLabel.text = String(hitValue)
+        } else {
+            slider.maximumValue = Float(hitValue)
+            maxValueLabel.text = String(hitValue)
         }
     }
     
