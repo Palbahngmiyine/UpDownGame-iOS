@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         let hitValue: Int = Int(slider.value)
         slider.value = Float(hitValue)
         print(slider.value)
+        
+        tryCount += 1
+        //tryCountLabel.text = String(tryCount) + "/5"
+        tryCountLabel.text = "\(tryCount)/5"
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton) {
