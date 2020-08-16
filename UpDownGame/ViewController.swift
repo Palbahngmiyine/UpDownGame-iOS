@@ -38,6 +38,18 @@ class ViewController: UIViewController {
         tryCount += 1
         //tryCountLabel.text = String(tryCount) + "/5"
         tryCountLabel.text = "\(tryCount)/5"
+        
+        if randomValue == hitValue {
+            print("You HIT!!")
+            reset()
+            return
+        }
+        
+        if tryCount >= 5 {
+            print("You lose..")
+            reset()
+            return
+        }
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton) {
@@ -56,7 +68,7 @@ class ViewController: UIViewController {
         slider.value = 15
         minValueLabel.text = "0"
         maxValueLabel.text = "30"
-        sliderValueLabel.text = "!5"
+        sliderValueLabel.text = "15"
     }
 }
 
