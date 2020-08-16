@@ -40,10 +40,12 @@ class ViewController: UIViewController {
         tryCountLabel.text = "\(tryCount)/5"
         
         if randomValue == hitValue {
-            print("You HIT!!")
+            //print("You HIT!!")
+            showAlert(message: "You HIT!!")
             reset()
         } else if tryCount >= 5 {
-            print("You lose..")
+            //print("You lose..")
+            showAlert(message: "You lose..")
             reset()
         } else if randomValue > hitValue {
             slider.minimumValue = Float(hitValue)
@@ -52,6 +54,21 @@ class ViewController: UIViewController {
             slider.maximumValue = Float(hitValue)
             maxValueLabel.text = String(hitValue)
         }
+    }
+    
+    func showAlert(message: String) {
+        
+        let alert = UIAlertController(title: nil,
+                                   message: message,
+                                   preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.reset()
+        }
+        
+        alert.addAction(okAction)
+        present(alert,
+               animated: true,
+               completion: nil)
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton) {
